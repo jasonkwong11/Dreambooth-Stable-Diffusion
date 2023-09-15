@@ -97,7 +97,6 @@ while True:
             s3_client.download_file(bucket_name, training_images_key, training_images_zip_filename)
 
             os.makedirs('training_images/{}'.format(project_name))
-
             os.system('unzip {} -d training_images/{}/'.format(training_images_zip_filename, project_name))
 
             nmr_images = len(os.listdir('training_images/{}/'.format(project_name)))
